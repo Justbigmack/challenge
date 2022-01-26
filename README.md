@@ -22,7 +22,7 @@ At the very first glance, I was honestly very confused, because there is no back
 
 I decided to use Next.js, because I am more used to it. CRA would have sufficed, but Next.js gives quite a bit out of the box and it is always nice to have a possibility of simply rendering pages statically, if possible. In my case, there are literally no API calls, so that is an overkill.
 
-My first steps were to set up a dev env with things like eslint, prettier, etc to organize the dev experience (but it actually was a mistake and I could have saved time on it). Then I started building out the layout and pages. The task it was still pretty vague, so I thought that I will figure it out on the go.
+My first steps were to set up a dev env with things like eslint, prettier, netlify, etc to organize the dev experience (but it actually was a mistake and I could have saved time on it). Then I started building out the layout and pages. The task it was still pretty vague, so I thought that I will figure it out on the go.
 
 I built the basics like header and tried to render the calendar, but quickly ran into the bug with the calendar library, because Next.js does not allow importing css files anywhere but the top level and in this library they were doing that. So I had to spend quite some time to fix that and the fix was to transpile their modules manually in `next.config.js`. I quickly rendered the calendar with some dummy data and decided to shift to building out the actual api or creating, deleting, etc attendees / events. For that I chose the state management library called [zustand](https://github.com/pmndrs/zustand). I find it quite easy and convenient to use. Their API is clear and consise compared to something like redux, where you need a lot of boilerplate to make things work.
 
@@ -37,7 +37,7 @@ And that is pretty much where I stopped.
 - No one is really protected from that, but a better solution might have been starting with the calendar and working things out with dummy data all the way to the working prototype. Instead I ended up with something that is in a non-working state. The API of this calendar was not as clear as I expected.
 - Write tests as I go. I was focusing on building the app out, but considering that I didn't get far and wrote 0 tests doesn't show me from a good side. I was trying to get the prototype to work and write tests later (I can write them, I didn't avoid them on purpose)
 
-# Feedback about the challenge itself
+# Feedback about the challenge
 
 - It is not really clear what the deliverable. It says that you don't need to build Backend for this task, but there is no BE endpoints in the task and there is no link to it, so you kind of have to build the BE(in a FE manner) to be able to do anything at all
 - One needs more time to complete this task. Perhaps the purpose of this task is to put you in unrealistic time constraints and see how you work under that pressure. In that case, it fulfilled its purpose.
