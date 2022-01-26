@@ -35,11 +35,20 @@ And that is pretty much where I stopped.
 # What I would have done differently
 
 - No one is really protected from that, but a better solution might have been starting with the calendar and working things out with dummy data all the way to the working prototype. Instead I ended up with something that is in a non-working state. The API of this calendar was not as clear as I expected.
-- Write tests as I go. I was focusing on building the app out, but considering that I didn't get far and wrote 0 tests doesn't show me from a good side. I was trying to get the prototype to work and write tests later (I can write them, I didn't avoid them on purpose)
+- Focus on particular features and finish them with tests. What I tried was to have a working prototype of most of the features, but I didn't have time to finish and write tests.
+
+# How I would tackle existing challenges
+
+- Write unit tests with jest for at least store operations (CRUD). I would write end-to-end tests with cypress to test the whole flow, adding information and seeing, if it renders correctly.
+- Make data from the store persist in the localStorage and initiate the store from the localStorage in the beginning (either from localStorage or set it to the default values)
+- Try to figure out the issue with calendar not updating from the events in the store. The issue I was running into was that when I add an event to the store, the calendar doesn't display it.
+- Add form validation
+- Add weekly and daily views to the calendar, which would include adding the necessary plugin and feeding it correct data based on library's API
+- Look into other features
 
 # Feedback about the challenge
 
 - It is not really clear what the deliverable. It says that you don't need to build Backend for this task, but there is no BE endpoints in the task and there is no link to it, so you kind of have to build the BE(in a FE manner) to be able to do anything at all
 - One needs more time to complete this task. Perhaps the purpose of this task is to put you in unrealistic time constraints and see how you work under that pressure. In that case, it fulfilled its purpose.
 - There is 2 sections on the requirements. Perhaps combinning them into one will make it more intuitive.
-- It is a bit frustrating that you have to rely on external libraries in this task and the chance that you have never worked with them is quite high, so the chance of running into bugs and not completing parts of the challenge that you know how to complete is also quite high
+- You have to rely on external libraries in this task and the chance that you have never worked with them is quite high, so the chance of running into bugs and not completing parts of the challenge that you have an idea of how to complete is also quite high
